@@ -2,20 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background-color: #030201;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.gradient {
+  background: linear-gradient(96.9deg, #0cc312 22.38%, #e2d61e 85.9%);
+}
+
+.gradientText {
+  background: linear-gradient(96.9deg, #0cc312 22.38%, #e2d61e 85.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  background: linear-gradient(99.18deg, #1cff23 18.37%, #fef633 97.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page {
+  padding-inline: 20px;
+  max-width: 1430px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-inline: 5.555555556vw;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 1440px) {
+  .page {
+    padding-inline: 80px;
+  }
+}
+
+.advertisement {
+  backdrop-filter: blur(39.1027717590332px);
+  box-shadow: 0px 3.13px 15.64px -0.78px #00000000;
+  border-block: 0.78px solid #ffffff33;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.084) 0%,
+      rgba(217, 217, 217, 0.042) 100%
+    ),
+    url('/images/pngs/bg.png');
+  background-size: cover, cover;
+  background-position: center, center;
+}
+
+.game {
+  background: linear-gradient(180deg, #222222 0%, #151515 100%);
+}
+
+.cta {
+  box-shadow: 0px 4px 20px -1px #00000000;
+  backdrop-filter: blur(50px);
+  border: 1px solid #90c340;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.084) 0%,
+      rgba(217, 217, 217, 0.042) 100%
+    ),
+    url('/images/pngs/bg.png');
+  background-size: cover, cover;
+  background-position: center, center;
+}
+
+.bg {
+  background-blend-mode: multiply;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.084) 0%,
+      rgba(217, 217, 217, 0.042) 100%
+    ),
+    url('/images/pngs/bg.png');
+  background-size: cover, cover;
+  background-position: center, center;
 }
