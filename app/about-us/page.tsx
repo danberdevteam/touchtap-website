@@ -12,6 +12,7 @@ export default function AboutUs() {
         body="Welcome to the ultimate learning playground, where kids can recognize
         colors, identify shapes, count numbers, and trace alphabets—all through
         interactive games that make learning fun and exciting!"
+        showFooter
       />
       <Cta />
       <Games />
