@@ -9,9 +9,11 @@ const rowdies = Rowdies({
 
 export default function Games() {
   return (
-    <div className="page flex flex-col gap-12 mb-[205px]">
+    <div className="page flex flex-col gap-12 md:gap-16 lg:gap-20 xl:gap-[100px] mb-[205px]">
       <div className="flex flex-col gap-[18px] text-center">
-        <h3 className={`${rowdies.className} text-3xl font-bold uppercase`}>
+        <h3
+          className={`${rowdies.className} text-3xl md:text-5xl md:text-[3vw] lg:text-[3.75vw] min-[1440px]:text-[54px] leading-[1.285185185] text-white uppercase`}
+        >
           <span className="gradientText">INCREDIBLE</span> GAMES
         </h3>
         <p className="md:text-lg lg:text-xl leading-[28px] max-w-[600px] mx-auto">
@@ -20,9 +22,9 @@ export default function Games() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-[54px] md:flex-row md:justify-start md:items-start">
+      <div className="flex flex-col gap-[54px] md:gap-16 lg:gap-20 xl:gap-[100px] md:flex-row md:justify-start md:items-start">
         <div
-          className="flex flex-col gap-[54px]"
+          className="flex flex-col gap-[54px] md:gap-16 lg:gap-20 xl:gap-[100px]"
           style={{
             gridTemplateColumns:
               'repeat(auto-fit, minmax(min(13.5em, 100%), 1fr))',
@@ -44,18 +46,18 @@ export default function Games() {
 
               <div className="flex flex-col gap-2.5">
                 <h3
-                  className={`${rowdies.className} text-xl font-bold capitalize`}
+                  className={`${rowdies.className} text-xl lg:text-2xl font-bold capitalize`}
                 >
                   {game.title}
                 </h3>
-                <p className="leading-[26px]">{game.description}</p>
+                <p className="leading-[26px] lg:text-lg">{game.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div
-          className="flex flex-col gap-[54px] md:mt-16 lg:mt-[80px] xl:mt-[102px]"
+          className="flex flex-col gap-[54px] md:gap-16 lg:gap-20 xl:gap-[100px] md:mt-16 lg:mt-[80px] xl:mt-[102px]"
           style={{
             gridTemplateColumns:
               'repeat(auto-fit, minmax(min(13.5em, 100%), 1fr))',

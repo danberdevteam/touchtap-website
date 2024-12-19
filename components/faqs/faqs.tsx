@@ -164,10 +164,17 @@ const faqs = [
 
 export default function Faqs() {
   return (
-    <div className="page flex flex-col gap-[60px]">
+    <div className="page flex flex-col gap-[60px] md:gap-16 lg:gap-20">
       {faqs.map((faq) => (
-        <div key={faq.type} className="flex flex-col gap-5">
-          <h2 className={`${rowdies.className} text-2xl`}>{faq.type}</h2>
+        <div
+          key={faq.type}
+          className="flex flex-col gap-5 md:gap-6 lg:gap-7 xl:gap-8"
+        >
+          <h2
+            className={`${rowdies.className} text-2xl md:text-3xl lg:text-[32px]`}
+          >
+            {faq.type}
+          </h2>
           <Accordion
             type="single"
             collapsible
@@ -196,7 +203,7 @@ export default function Faqs() {
                       {Array.isArray(faq.answer) ? (
                         <ul className="flex flex-col gap-2 list-disc list-inside">
                           {faq.answer.map((answer, index) => (
-                            <li key={index} className="text-lg font-bold">
+                            <li key={index} className="text-base md:text-lg">
                               {answer}
                             </li>
                           ))}

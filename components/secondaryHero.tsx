@@ -27,7 +27,7 @@ export default function SecondaryHero({
     <div
       className={`page flex flex-col items-center lg:items-start text-center ${
         showExplore
-          ? 'mb-[87px] lg:mb-[120px]'
+          ? 'mb-[87px] lg:mb-[140px]'
           : showFooter
           ? 'mb-[119px] lg:mb-[107px]'
           : 'mb-[0px] lg:mb-[107px]'
@@ -39,7 +39,7 @@ export default function SecondaryHero({
         {startText} <span className="title">{accentText}</span> {endText}
       </p>
 
-      <p className="pt-10 lg:pt-[43px] pb-9 lg:pb-[37px] max-w-[600px] lg:max-w-[800px] text-xl leading-[35px] mx-auto tracking-[4%]">
+      <p className="pt-10 lg:pt-[43px] pb-9 lg:pb-[37px] max-w-[600px] lg:max-w-[820px] text-xl leading-[35px] mx-auto tracking-[4%]">
         {body}
       </p>
 

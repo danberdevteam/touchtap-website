@@ -29,7 +29,9 @@ export default function Features() {
   return (
     <div className="page flex flex-col gap-[42px] sm:gap-[12.291666667vw]">
       <div className="flex flex-col gap-[18px] text-center">
-        <h3 className={`${rowdies.className} text-3xl font-bold uppercase`}>
+        <h3
+          className={`${rowdies.className} text-3xl md:text-5xl md:text-[3vw] lg:text-[3.75vw] min-[1440px]:text-[54px] leading-[1.285185185] text-white uppercase`}
+        >
           Features
         </h3>
         <p className="md:text-lg lg:text-xl leading-[28px] max-w-[650px] lg:max-w-[950px] mx-auto">
@@ -75,11 +77,11 @@ export default function Features() {
 
               <div className="flex flex-col gap-2 text-start">
                 <h3
-                  className={`${rowdies.className} sm:text-lg md:text-xl lg:text-2xl font-bold capitalize`}
+                  className={`${rowdies.className} sm:text-lg md:text-xl lg:text-2xl capitalize`}
                 >
                   {feature.title}
                 </h3>
-                <p className="">{feature.body}</p>
+                <p className="text-[#DAD7D7]">{feature.body}</p>
               </div>
             </div>
           ))}

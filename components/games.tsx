@@ -35,7 +35,7 @@ export const games = [
 
 export default function Games() {
   return (
-    <div className="text-center flex flex-col gap-[100px] mb-40 page">
+    <div className="text-center flex flex-col gap-[100px] mb-40 lg:mb-44 xl:mb-48 page">
       <div className="flex flex-col gap-[18px] md:max-w-[590px] mx-auto">
         <h3
           className={`${rowdies.className} text-3xl md:text-5xl md:text-[3vw] lg:text-[3.75vw] min-[1440px]:text-[54px] leading-[1.285185185] text-white uppercase`}
