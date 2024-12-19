@@ -5,7 +5,7 @@ export default function Cta() {
   return (
     <div className="page">
       <div
-        className="grid gap-4 text-center cta rounded-[10px] py-[33.5px] mb-[174px] md:py-14 lg:py-12 px-9 md:px-[6.944444444vw] overflow-hidden"
+        className="grid gap-4 text-center cta rounded-[10px] py-20 mb-[174px] md:py-14 px-5 md:px-[6.944444444vw] overflow-hidden"
         style={{
           gridTemplateColumns:
             'repeat(auto-fit, minmax(min(13.5em, 100%), 1fr))',

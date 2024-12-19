@@ -27,8 +27,8 @@ export default function Features() {
             src={'/images/pngs/showcase-four.png'}
             alt="cta"
             layout="responsive"
-            width={701}
-            height={940}
+            width={745}
+            height={1001}
           />
         </div>
 

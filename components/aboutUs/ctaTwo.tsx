@@ -32,13 +32,13 @@ export default function CtaTwo() {
           </div>
         </div>
 
-        <div className="relative w-full px-4 lg:px-0 max-w-[400px] md:max-w-[380px] lg:max-w-[425px]">
+        <div className="relative w-full px-4 lg:px-0 max-w-[400px] md:max-w-[360px] lg:max-w-[425px]">
           <Image
-            src={'/images/pngs/hero.png'}
+            src={'/images/pngs/cta-two.png'}
             alt="cta"
             layout="responsive"
-            width={721}
-            height={724}
+            width={850}
+            height={864}
           />
         </div>
       </div>

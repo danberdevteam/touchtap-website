@@ -57,18 +57,18 @@ export default function Games() {
       >
         {games.map((game) => (
           <div className={`flex items-center flex-col`} key={game.title}>
-            <div className="relative z-[1] w-full max-w-[186px]">
+            <div className="relative z-[1] w-full max-w-[180px]">
               <Image
                 src={game.image}
                 alt={game.title}
                 layout="responsive"
-                width={701}
-                height={939}
+                width={359}
+                height={749}
               />
             </div>
 
             <div
-              className="relative flex flex-col game -mt-[102.58px] pt-[109.78px] rounded-bl-[2.79px] rounded-br-[2.79px] grow max-w-[450px] overflow-hidden"
+              className="relative flex flex-col game -mt-24 pt-[109.78px] rounded-bl-[2.79px] rounded-br-[2.79px] grow max-w-[450px] overflow-hidden mx-2 sm:mx-0"
               style={{
                 clipPath:
                   'polygon(6% 0, 94% 0, 100% 6%, 100% 100%, 80% 100%, 20% 100%, 0 100%, 0 6%)',
