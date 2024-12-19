@@ -26,7 +26,11 @@ export default function SecondaryHero({
   return (
     <div
       className={`page flex flex-col items-center lg:items-start text-center ${
-        showExplore ? 'mb-[87px] lg:mb-[120px]' : 'mb-[119px] lg:mb-[107px]'
+        showExplore
+          ? 'mb-[87px] lg:mb-[120px]'
+          : showFooter
+          ? 'mb-[119px] lg:mb-[107px]'
+          : 'mb-[0px] lg:mb-[107px]'
       }`}
     >
       <p

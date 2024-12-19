@@ -1,4 +1,6 @@
 import Cta from '@/components/aboutUs/cta';
+import CtaTwo from '@/components/aboutUs/ctaTwo';
+import Features from '@/components/aboutUs/features';
 import Games from '@/components/aboutUs/games';
 import SecondaryHero from '@/components/secondaryHero';
 
@@ -16,6 +18,8 @@ export default function AboutUs() {
       />
       <Cta />
       <Games />
+      <CtaTwo />
+      <Features />
     </div>
   );
 }

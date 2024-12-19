@@ -9,12 +9,12 @@ const rowdies = Rowdies({
 
 export default function Games() {
   return (
-    <div className="page flex flex-col gap-12">
+    <div className="page flex flex-col gap-12 mb-[205px]">
       <div className="flex flex-col gap-[18px] text-center">
         <h3 className={`${rowdies.className} text-3xl font-bold uppercase`}>
           <span className="gradientText">INCREDIBLE</span> GAMES
         </h3>
-        <p className="leading-[28px]">
+        <p className="md:text-lg lg:text-xl leading-[28px] max-w-[600px] mx-auto">
           Offer sneak peeks and previews of upcoming games, including trailers,
           screenshots, and information about release.
         </p>
@@ -55,7 +55,7 @@ export default function Games() {
         </div>
 
         <div
-          className="flex flex-col gap-[54px] md:mt-20 lg:mt-24 xl:mt-[102px]"
+          className="flex flex-col gap-[54px] md:mt-16 lg:mt-[80px] xl:mt-[102px]"
           style={{
             gridTemplateColumns:
               'repeat(auto-fit, minmax(min(13.5em, 100%), 1fr))',

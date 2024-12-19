@@ -2,6 +2,12 @@
 import { Rowdies } from 'next/font/google';
 import Image from 'next/image';
 import { useState } from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const rowdies = Rowdies({
   weight: ['400'],
@@ -33,11 +39,10 @@ const faqs = [
     ],
   },
   {
-    no: 'Q4',
     type: 'GAMEPLAY QUESTIONS',
     faqs: [
       {
-        no: 'Q',
+        no: 'Q4',
         question: 'What kind of gameplay does TouchTapAdventures offer?',
         answer:
           'It offers an endless runner experience with collectibles and obstacles, along with mini-games that help kids develop motor skills and learn foundational concepts like counting, colors, shapes, and alphabets.',
@@ -67,11 +72,10 @@ const faqs = [
     ],
   },
   {
-    no: 'Q8',
     type: 'TECHNICAL QUESTIONS',
     faqs: [
       {
-        no: 'Q',
+        no: 'Q8',
         question: 'What Unity version was used to develop TouchTapAdventures?',
         answer: 'The game was developed using Unity 2022.3.53f1.',
       },
@@ -112,11 +116,10 @@ const faqs = [
     ],
   },
   {
-    no: 'Q13',
     type: 'ACCOUNT AND DATA QUESTIONS',
     faqs: [
       {
-        no: 'Q',
+        no: 'Q13',
         question: 'Do I need to create an account to play the game?',
         answer:
           'Yes, the game requires a sign-in/login through PlayFab to save progress and access the leaderboard.',
@@ -160,58 +163,53 @@ const faqs = [
 ];
 
 export default function Faqs() {
-  const [openedFaq, setOpenedFaq] = useState<string>();
-
-  const toggleFaq = (question: string) =>
-    setOpenedFaq((prev) => (prev === question ? undefined : question));
-
   return (
     <div className="page flex flex-col gap-[60px]">
       {faqs.map((faq) => (
         <div key={faq.type} className="flex flex-col gap-5">
           <h2 className={`${rowdies.className} text-2xl`}>{faq.type}</h2>
-          <div className="flex flex-col gap-2.5">
-            {faq.faqs.map((item) => (
-              <div key={item.question} className="cta py-3 px-4 rounded-[10px]">
-                <div
-                  onClick={() => toggleFaq(item.question)}
-                  className="bg-[#030201] py-5 px-2.5 rounded-t-[10px] flex justify-between items-center gap-2 cursor-pointer transition-transform"
-                >
-                  <p className={`${rowdies.className}`}>{`${item.no}:`}</p>
-                  <p className={`${rowdies.className}`}>{item.question}</p>
-                  <Image
-                    src={
-                      openedFaq === item.question
-                        ? '/images/svgs/less.svg'
-                        : '/images/svgs/more.svg'
-                    }
-                    alt="toggle icon"
-                    width={20}
-                    height={20}
-                    className={`transition-transform ${
-                      openedFaq === item.question ? 'rotate-180' : ''
-                    }`}
-                  />
-                </div>
-
-                <div
-                  className={`bg-[#030201] rounded-b-[10px] overflow-hidden transition-max-height duration-500 ease-in-out ${
-                    openedFaq === item.question ? 'max-h-[200px]' : 'max-h-0'
-                  }`}
-                >
-                  <p className="py-3 px-4 text-sm">
-                    {Array.isArray(item.answer)
-                      ? item.answer.map((line, index) => (
-                          <span key={index} className="block">
-                            {line}
-                          </span>
-                        ))
-                      : item.answer}
-                  </p>
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full flex flex-col gap-2.5"
+          >
+            {faq.faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="cta py-3 lg:py-4 px-4 md:px-5 lg:px-6 rounded-[10px]"
+              >
+                <div className="bg-[#030201] py-5 px-2.5 md:px-4 lg:px-5 rounded-[10px] lg:rounded-[20px]">
+                  <AccordionItem key={faq.question} value={index.toString()}>
+                    <AccordionTrigger className="text-white font-semibold text-base md:text-lg text-start">
+                      <div className="flex justify-between gap-2 mr-2">
+                        <p
+                          className={`${rowdies.className} md:text-lg lg:text-xl xl:text-2xl`}
+                        >{`${faq.no}:`}</p>
+                        <p
+                          className={`${rowdies.className} md:text-lg lg:text-xl xl:text-2xl`}
+                        >
+                          {faq.question}
+                        </p>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base lg:text-lg">
+                      {Array.isArray(faq.answer) ? (
+                        <ul className="flex flex-col gap-2 list-disc list-inside">
+                          {faq.answer.map((answer, index) => (
+                            <li key={index} className="text-lg font-bold">
+                              {answer}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>{faq.answer}</p>
+                      )}
+                    </AccordionContent>
+                  </AccordionItem>
                 </div>
               </div>
             ))}
-          </div>
+          </Accordion>
         </div>
       ))}
     </div>
