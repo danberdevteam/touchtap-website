@@ -10,18 +10,36 @@ body {
 
 .gradient {
   background: linear-gradient(96.9deg, #0cc312 22.38%, #e2d61e 85.9%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 7s ease infinite;
 }
 
 .gradientText {
   background: linear-gradient(96.9deg, #0cc312 22.38%, #e2d61e 85.9%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 7s ease infinite;
 }
 
 .title {
   background: linear-gradient(99.18deg, #1cff23 18.37%, #fef633 97.03%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 7s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .page {
@@ -61,9 +79,10 @@ body {
 }
 
 .cta {
+  position: relative;
   box-shadow: 0px 4px 20px -1px #00000000;
   backdrop-filter: blur(50px);
-  border: 1px solid #90c340;
+  border: none;
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.084) 0%,
@@ -72,18 +91,45 @@ body {
     url('/images/pngs/bg.png');
   background-size: cover, cover;
   background-position: center, center;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.bg {
-  background-blend-mode: multiply;
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.084) 0%,
-      rgba(217, 217, 217, 0.042) 100%
-    ),
-    url('/images/pngs/bg.png');
-  background-size: cover, cover;
-  background-position: center, center;
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(0deg, #0cc312, #e2d61e, #0cc312, #e2d61e);
+  background-size: 300% 300%;
+  animation: borderMove 7s linear infinite;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @layer base {
