@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="mt-20 md:mt-36 mb-28 md:mb-36 -rotate-[1.98deg]">
+      <div className="mt-14 md:mt-36 mb-28 md:mb-36 -rotate-[1.98deg]">
         <Advertisement />
       </div>
       <Cta />

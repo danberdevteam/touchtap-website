@@ -39,7 +39,7 @@ export default function SecondaryHero({
         {startText} <span className="title">{accentText}</span> {endText}
       </p>
 
-      <p className="pt-10 lg:pt-[43px] pb-9 lg:pb-[37px] leading-[29px] max-w-[600px] lg:max-w-[800px] md:text-lg lg:text-xl mx-auto">
+      <p className="pt-10 lg:pt-[43px] pb-9 lg:pb-[37px] max-w-[600px] lg:max-w-[800px] text-xl leading-[35px] mx-auto tracking-[4%]">
         {body}
       </p>
 

@@ -8,7 +8,7 @@ const rowdies = Rowdies({
 
 export default function FooterCta() {
   return (
-    <div className="relative bg-[url('/images/pngs/footer-cta.png')] bg-cover bg-no-repeat bg-left-top w-full px-6 py-24 mt-40 lg:mt-[10.416666667vw] lg:mb-0 lg:pt-[10.902777778vw] lg:pb-[11.944444444vw] mb-28">
+    <div className="relative bg-[url('/images/pngs/footer-cta.png')] bg-cover bg-no-repeat bg-left-top w-full px-6 py-24 mt-32 lg:mt-[10.416666667vw] lg:mb-0 lg:pt-[10.902777778vw] lg:pb-[11.944444444vw] mb-28">
       <div className="absolute inset-0 bg-[#030201]/10"></div>
       <div className="relative flex flex-col items-center justify-center text-center">
         <p

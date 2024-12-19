@@ -1,11 +1,29 @@
 import Image from 'next/image';
-import { games } from '../games';
 import { Rowdies } from 'next/font/google';
 
 const rowdies = Rowdies({
   weight: ['700'],
   subsets: ['latin'],
 });
+
+const features = [
+  {
+    title: 'SMART PLAY',
+    body: 'Identify and click the correct colors as prompted, avoiding repeats, until all matches are found; the game tracks your time, correct, and incorrect clicks.',
+  },
+  {
+    title: 'GROWING BRAINS',
+    body: 'Count 10 randomly appearing stars by clicking and holding, with the game tracking your time, accuracy, and errors.',
+  },
+  {
+    title: 'LITTLE MINDS',
+    body: 'Players identify and click the correct shapes prompted by text; correct selections vanish until all shapes are gone, with time, accuracy, and errors tracked.',
+  },
+  {
+    title: 'LEARNABLE TRACE',
+    body: 'Players identify and click the correct shapes prompted by text; correct selections vanish until all shapes are gone, with time, accuracy, and errors tracked.',
+  },
+];
 
 export default function Features() {
   return (
@@ -21,7 +39,7 @@ export default function Features() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row lg:justify-around items-center gap-[250px] sm:gap-24 lg:gap-[8.055555556vw] text-center lg:text-start">
+      <div className="flex flex-col lg:flex-row lg:justify-around items-center gap-[250px] sm:gap-24 lg:gap-[7vw] xl:gap-[8.055555556vw] text-center lg:text-start">
         <div className="relative w-full px-4 lg:px-0 max-w-[400px] md:max-w-[380px] lg:max-w-[428px]">
           <Image
             src={'/images/pngs/showcase-four.png'}
@@ -33,22 +51,22 @@ export default function Features() {
         </div>
 
         <div className="flex flex-col gap-[54px] lg:gap-[40px] max-w-[400px]">
-          {games.map((game) => (
+          {features.map((feature) => (
             <div
               className={`flex justify-start gap-7 lg:gap-8`}
-              key={game.title}
+              key={feature.title}
             >
               <div className="shrink-0 mt-1">
                 <Image
                   src={'/images/svgs/category.svg'}
-                  alt="game"
+                  alt="feature"
                   width={38}
                   height={39}
                   className="lg:hidden"
                 />
                 <Image
                   src={'/images/svgs/category.svg'}
-                  alt="game"
+                  alt="feature"
                   width={40}
                   height={40}
                   className="hidden lg:block"
@@ -59,9 +77,9 @@ export default function Features() {
                 <h3
                   className={`${rowdies.className} sm:text-lg md:text-xl lg:text-2xl font-bold capitalize`}
                 >
-                  {game.title}
+                  {feature.title}
                 </h3>
-                <p className="">{game.description}</p>
+                <p className="">{feature.body}</p>
               </div>
             </div>
           ))}

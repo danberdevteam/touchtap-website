@@ -8,7 +8,7 @@ export default function FAQ() {
         startText="FREQUENTLY"
         accentText="ASKED"
         endText="QUESTIONS"
-        body="Do you have any kind Of questions? We're here to help."
+        body="Do you have any kind of questions? We're here to help."
       />
       <Faqs />
     </div>

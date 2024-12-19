@@ -46,20 +46,10 @@ export default function Showcase() {
             key={index}
             className={`flex ${
               index % 2
-                ? 'flex-col-reverse md:flex-row-reverse'
-                : 'flex-col md:flex-row'
+                ? 'flex-col md:flex-row'
+                : 'flex-col md:flex-row-reverse'
             } gap-[50px] md:gap-[6.944444444vw] items-center lg:justify-between`}
           >
-            <div className="relative w-full max-w-[320px] md:max-w-[370px]">
-              <Image
-                src={showcases.image}
-                alt={showcases.title}
-                layout="responsive"
-                width={701}
-                height={939}
-              />
-            </div>
-
             <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 max-w-[450px] lg:max-w-[551px]">
               <h2 className="text-xl text-[#DAD7D7]">{showcases.title}</h2>
               <h3
@@ -70,6 +60,16 @@ export default function Showcase() {
               <p className="text-[#DAD7D7] text-lg lg:text-xl">
                 {showcases.description}
               </p>
+            </div>
+
+            <div className="relative w-full max-w-[320px] md:max-w-[370px]">
+              <Image
+                src={showcases.image}
+                alt={showcases.title}
+                layout="responsive"
+                width={701}
+                height={939}
+              />
             </div>
           </div>
         ))}
