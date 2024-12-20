@@ -9,7 +9,7 @@ const rowdies = Rowdies({
 export default function CtaTwo() {
   return (
     <div className="page lg:px-0">
-      <div className="flex flex-col lg:flex-row items-center gap-[50px] lg:gap-[8.055555556vw] text-center lg:text-start cta lg:border-none rounded-[10px] py-[80px] mb-[174px] md:py-14 md:px-[6.944444444vw] lg:rounded-none lg:py-[8.472222222vw] xl:py-[122px]">
+      <div className="flex flex-col lg:flex-row items-center gap-[50px] lg:gap-[8.055555556vw] text-center lg:text-start cta lg:border-none rounded-[10px] py-[80px] mb-[174px] md:py-14 md:px-[6.944444444vw] lg:rounded-none lg:py-[8.472222222vw] xl:py-[122px] lg:before:hidden">
         <div className="flex flex-col items-center lg:items-start px-3">
           <h3
             className={`${rowdies.className} text-3xl md:text-5xl md:text-[3vw] lg:text-[3.75vw] min-[1440px]:text-[54px] leading-[1.285185185] text-white uppercase`}
