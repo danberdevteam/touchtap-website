@@ -1,6 +1,8 @@
+'use client';
 import { Rowdies } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const rowdies = Rowdies({
   weight: ['400'],
@@ -79,6 +81,11 @@ const socialMedias: SocialMedia[] = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === '/privacy-policy' || pathname === '/terms-of-service')
+    return <></>;
+
   return (
     <div className="page flex flex-col gap-6 lg:gap-[62px] pt-8 pb-3 sm:py-9 lg:py-10 w-full">
       <div className="lg:flex lg:justify-between">
@@ -102,11 +109,27 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-1 lg:gap-3">
-            {routes.map((route) => (
-              <Link className="font-medium" href={route.link} key={route.name}>
-                {route.name}
-              </Link>
-            ))}
+            {routes.map((route) =>
+              route.link === 'privacy-policy' ||
+              route.link === 'terms-of-service' ? (
+                <a
+                  className="font-medium"
+                  href={route.link}
+                  key={route.name}
+                  target="_blank"
+                >
+                  {route.name}
+                </a>
+              ) : (
+                <Link
+                  className="font-medium"
+                  href={route.link}
+                  key={route.name}
+                >
+                  {route.name}
+                </Link>
+              ),
+            )}
           </div>
         </div>
 

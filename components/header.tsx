@@ -14,6 +14,9 @@ export default function Header() {
   const pathname = usePathname();
   const [showMobileNav, setShowMobileNav] = useState(false);
 
+  if (pathname === '/privacy-policy' || pathname === '/terms-of-service')
+    return <></>;
+
   return (
     <div className="relative">
       {showMobileNav ? (

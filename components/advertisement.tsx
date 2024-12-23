@@ -1,5 +1,7 @@
+'use client';
 import { Rowdies } from 'next/font/google';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const rowdies = Rowdies({
   weight: ['400'],
@@ -21,6 +23,11 @@ const items = [
   },
 ];
 export default function Advertisement() {
+  const pathname = usePathname();
+
+  if (pathname === '/privacy-policy' || pathname === '/terms-of-service')
+    return <></>;
+
   return (
     <div className="w-full overflow-x-hidden advertisement py-5">
       <div
