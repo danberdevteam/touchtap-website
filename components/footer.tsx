@@ -178,7 +178,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <p className="text-[#BBBBBBBB] text-xs leading-[20px] font-bold text-center mb-2 mt-4 sm:mt-0 sm:mb-0">
+      <p className="text-[#BBBBBBBB] text-xs leading-[20px] font-bold text-center mb-2 mt-3.5 sm:mt-0 sm:mb-0 lg:-mt-4">
         TouchTap Adventures is a service mark of Danber Technologies, Inc. ©
         2024 Danber Technologies, Inc. All rights reserved.
       </p>
